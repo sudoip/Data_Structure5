@@ -1,0 +1,34 @@
+The Queue Interface is a part of java.util package and extends the Collection interface. It stores and processes the data in an order where elements are added at the rear and removed from the front.
+
+Key Features
+FIFO Order : Elements are processed in the order they were inserted (First-In-First-Out).
+No Random Access : Unlike List, elements cannot be accessed directly by index.
+Multiple Variants : Includes PriorityQueue, Deque, ArrayDeque and LinkedList implementations.
+Two Sets of Methods : Throws-exception versions (add, remove, element) and safe versions (offer, poll, peek).
+
+Declaration of Java Queue Interface
+The Queue interface is declared as:
+
+public interface Queue extends Collection
+
+We cannot instantiate a Queue directly as it is an interface. Here, we can use a class like LinkedList or PriorityQueue that implements this interface.
+
+Queue<Obj> queue = new LinkedList<Obj>();
+
+Now let us go through a simple example first, then we will deep dive into the article.
+
+Example: Basic Queue using LinkedList
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class hft {
+    
+  	public static void main(String args[]) 
+    {
+        // Create a Queue of Integers using LinkedList
+        Queue<Integer> q = new LinkedList<>();
+        
+        System.out.println("Queue elements: " + q);
+    }
+}
